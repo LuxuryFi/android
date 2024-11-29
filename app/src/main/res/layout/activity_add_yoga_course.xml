@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddYogaCourseActivity">
+
+    <!-- Day of the Week -->
+    <EditText
+        android:id="@+id/dayOfWeekEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Day of the Week"
+        android:layout_marginBottom="12dp"
+        android:padding="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Time -->
+    <EditText
+        android:id="@+id/timeEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Time"
+        android:layout_marginBottom="12dp"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/dayOfWeekEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Capacity -->
+    <EditText
+        android:id="@+id/capacityEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Capacity"
+        android:layout_marginBottom="12dp"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/timeEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Duration -->
+    <EditText
+        android:id="@+id/durationEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Duration (minutes)"
+        android:layout_marginBottom="12dp"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/capacityEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Price -->
+    <EditText
+        android:id="@+id/priceEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Price"
+        android:layout_marginBottom="12dp"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/durationEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Class Type -->
+    <EditText
+        android:id="@+id/classTypeEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Class Type"
+        android:layout_marginBottom="12dp"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/priceEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Image URL input -->
+    <EditText
+        android:id="@+id/textImage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Image URL"
+        android:layout_marginTop="16dp"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/classTypeEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Description -->
+    <EditText
+        android:id="@+id/descriptionEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Description"
+        android:layout_marginBottom="12dp"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/textImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Teacher -->
+    <EditText
+        android:id="@+id/teacherEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Teacher"
+        android:layout_marginBottom="16dp"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/descriptionEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Camera Preview -->
+    <!-- Image View -->
+    <EditText
+        android:id="@+id/positionEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Position"
+        android:layout_marginBottom="16dp"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/teacherEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/buttonAction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Action Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texture"
+        tools:ignore="MissingConstraints" />
+
+    <!-- Button Container (Save & Back buttons side by side) -->
+
+    <TextureView
+        android:id="@+id/texture"
+        android:layout_width="243dp"
+        android:layout_height="143dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teacherEditText"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@id/teacherEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Save Button -->
+
+        <!-- Back Button -->
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/saveButton"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAction"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:text="Save Class"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAction"
+        app:layout_constraintVertical_bias="0.038"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
